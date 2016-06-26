@@ -1,8 +1,0 @@
-﻿  main.cpp
-c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
-  c:\program files (x86)\microsoft visual studio 14.0\vc\atlmfc\include\afx.h(33): note: 参见“MBCS_Support_Deprecated_In_MFC”的声明
-  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
-d:\code\nuoenc\nuoencprj\nuoenc\main.cpp(61): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
-d:\code\nuoenc\nuoencprj\nuoenc\main.cpp(80): warning C4305: “=”: 从“double”到“float”截断
-  NuoEnc.vcxproj -> D:\Code\NuoEnc\NuoEncPrj\Debug\NuoEnc.exe
-  NuoEnc.vcxproj -> D:\Code\NuoEnc\NuoEncPrj\Debug\NuoEnc.pdb (Partial PDB)
