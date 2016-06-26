@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 	CFile headFile;
 	CString nuoFilename = "D:\\Code\\NuoEnc\\code\\1.nuo";
 	CString romFilename = "D:\\Code\\NuoEnc\\code\\1.rom";
-	CString headFilename = "D:\\Code\\NuoEnc\\code\\head.rom";
+	CString headFilename = "D:\\Code\\NuoEnc\\code\\head.hex";
 	CString pBuffer;
 
 
