@@ -11,12 +11,15 @@ if "%2" NEQ "" set para=%2
 
 set temp=tmp.txt
 set targetfile=tgt.txt
+set nuofile=nuo.txt
 set logfile=result_%date:~0,4%%date:~5,2%%date:~8,2%_%time:~0,2%%time:~3,2%%time:~6,2%.log
-
 
 if exist %temp% del %temp%
 if exist %targetfile% del %targetfile%
 @echo File directory: %wd%
+
+RD /S /Q %wd%\output
+mkdir %wd%\output
 
 
 dir %wd%\*.wav /b /on >%temp%
@@ -33,7 +36,20 @@ for /f %%a in (%targetfile%) do (
 	NuoEnc.exe %%a %para% >> %logfile%
 	)
 
-@echo Complete!
+:: move files
+move /Y %wd%\*.nuo %wd%\output >> %logfile%
+
+@echo Nuo Encode Complete!
+
+:: Nuo2Rom
+@echo Making flash.ROM ...
+dir %wd%\output\*.nuo /b /on >%temp%
+for /f %%a in (%temp%) do (
+	echo %wd%\output\%%a >> %nuofile%
+	)
+
+Nuo2Rom %nuofile% %wd%\output\flash.ROM
+@echo ROM Complete!
 
 goto exit
 
@@ -44,3 +60,4 @@ goto exit
 del %temp%
 del %targetfile%
 del AudioTool.log
+del %nuofile%
