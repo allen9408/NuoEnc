@@ -22,10 +22,6 @@
     + 常规 -> MFC的使用：在静态库中使用MFC  
     + 常规 -> 字符集：使用多字节字符集  
     + C/C++ -> 预处理器 -> 预处理器定义：modify "_MFC" to "_UNICODE"
-4. Run m.bat to build
-    + b: build
-    + r: rebuild
-    + c: clean
 
 ### Nuo2RomPrj
 1. SDK: Visual Studio 2015 (support MFC)
