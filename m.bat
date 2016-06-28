@@ -15,13 +15,25 @@ if "%command%"=="" (
         goto PrintHelp
         )
 
-:: build
-devenv .\NuoEncPrj\NuoEnc.sln %command%
 
+set target=
+if "%1"==""         set target=all
+if "%1"=="n"        set target=Nuo
+if "%1"=="r"        set target=Rom
+
+
+:Nuo
+devenv .\Projects\NuoEncPrj\NuoEnc.sln %command%
 :: copy exe 
-copy /Y .\NuoEncPrj\Debug\NuoEnc.exe .\NuoEnc.exe
-
+copy /Y .\Projects\NuoEncPrj\Debug\NuoEnc.exe .\NuoEnc.exe
+if "%target%"=="all"	goto Rom
 goto exit
+
+:Rom
+devenv .\Projects\Nuo2RomPrj\Nuo2RomPrj.sln %command%
+copy /Y .\Projects\Nuo2RomPrj\Debug\Nuo2RomPrj.exe .\Nuo2Rom.exe
+goto exit
+
 
 :PrintHelp
 setlocal
