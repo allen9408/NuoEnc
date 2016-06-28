@@ -6,13 +6,13 @@
 1. Microsoft Visual C++ 2010 Redistributable Package (x86)
 
 ## Usage：
-1. Wav -> Nuo encoder
-    + nuocodec.bat *File Directory* *para*  
+1. Wav to Rom
+    + e.bat   *[File Directory]*  *[para]*  
     + File Directory: include wav files (default: ./)
     + para: Bit per sample, 0.8~2.0, step 0.1(default: 1.5) 
 
-2. Nuo -> Rom converter
-    + temperary support single nuo file converting
+2. Flash Rom
+    + f.bat
 
 ## Develop Notice:
 ### NuoEncPrj
@@ -31,4 +31,17 @@
 1. SDK: Visual Studio 2015 (support MFC)
 2. Option for Project:
     + 常规 -> MFC的使用：在静态库中使用MFC  
+3. Rom component
+![Rom](http://o7orbx8c7.bkt.clouddn.com/NuoRom.png)
+
+### Build
+1. m.bat  *[command]*  *[target]*  
+    **command**:  
+        + b: build  
+        + r: rebuild  
+        + c: clean  
+    **target**:  
+        + a: all  
+        + n: NuoEnc  
+        + r: Nuo2Rom  
 
