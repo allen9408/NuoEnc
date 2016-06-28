@@ -18,6 +18,7 @@ if "%command%"=="" (
 
 set target=
 if "%1"==""         set target=all
+if "%1"=="a"        set target=all
 if "%1"=="n"        set target=Nuo
 if "%1"=="r"        set target=Rom
 
@@ -38,11 +39,16 @@ goto exit
 :PrintHelp
 setlocal
 echo Usage:
-echo m.bat [command]
+echo m.bat [command] [target]
 echo * command:
 echo     - b / build
 echo     - r / rebuild
 echo     - c / clean
+echo * command:
+echo     - a / all
+echo     - n / NuoEnc
+echo     - r / Nuo2Rom
+
 endlocal
 
 :exit
