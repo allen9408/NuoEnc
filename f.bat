@@ -2,6 +2,6 @@
 @echo off
 
 :: flash
-.\SPIFlashWriter\NuVoiceWriterUI.exe --spidata=%~dp0flash.ROM --actions=evp
+.\SPIFlashWriter\NuVoiceWriter.exe --spidata=%~dp0flash.ROM --actions=evp
 
 :exit
