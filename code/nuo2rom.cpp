@@ -46,7 +46,6 @@ int main(int argc, char const *argv[])
 	int reserved = 16;
 
 	/* Open Record File */
-
 	if (!(recFile.Open(recFilename, CFile::modeCreate | CFile::modeWrite, NULL))) {
 		cout << "Open rec file failed!" << endl;
 		system("pause");

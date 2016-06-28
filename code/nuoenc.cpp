@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
 	CString file;
 	float para = 1.5;
 
+	// Load DLL
 	HINSTANCE hAudioEncoer = ::LoadLibrary(_T("TVAUDIOENODER.dll"));
 	if (!hAudioEncoer) {
 		cout << "load DLL fail" << endl;
@@ -53,7 +54,7 @@ int main(int argc, char *argv[])
 	S_BUIDINFOEX sBuildInfo;
 
 
-
+	// Load File
 	cout << endl;
 	cout << "Start NuOne Encoding" << endl;
 	if (argc > 1) {
@@ -72,6 +73,7 @@ int main(int argc, char *argv[])
 	CString csNuOneXfilename = Filename + "nuo";
 	wcout << "Outputfile: " << csNuOneXfilename.GetString() << endl;
 
+	// Encodee parameters
 	sBuildInfo.dwMD4EncoderIndex = 0;
 	sBuildInfo.dwNuOEngrThr = 80;
 	sBuildInfo.fNuS_BSP = 2.0;
@@ -80,6 +82,7 @@ int main(int argc, char *argv[])
 	sBuildInfo.fNuV_BSP = 0.3;
 	sBuildInfo.dwVADCNG = 1;
 
+	// encode
 	try {
 		(*pAudioEnc) (
 			csWaveFileName.GetBuffer(0),
