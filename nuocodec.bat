@@ -48,7 +48,7 @@ for /f %%a in (%temp%) do (
 	echo %wd%\output\%%a >> %nuofile%
 	)
 
-Nuo2Rom %nuofile% %wd%\output\flash.ROM
+Nuo2Rom %nuofile% .\flash.ROM
 @echo ROM Complete!
 
 goto exit
