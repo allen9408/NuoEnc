@@ -24,15 +24,15 @@ if "%1"=="r"        set target=Rom
 
 
 :Nuo
-devenv .\Projects\NuoEncPrj\NuoEnc.sln %command%
+devenv .\Projects\NuoEncPrj\NuoEnc.sln %command% "Release"
 :: copy exe 
-copy /Y .\Projects\NuoEncPrj\Debug\NuoEnc.exe .\NuoEnc.exe
+copy /Y .\Projects\NuoEncPrj\Release\NuoEnc.exe .\NuoEnc.exe
 if "%target%"=="all"	goto Rom
 goto exit
 
 :Rom
-devenv .\Projects\Nuo2RomPrj\Nuo2RomPrj.sln %command%
-copy /Y .\Projects\Nuo2RomPrj\Debug\Nuo2RomPrj.exe .\Nuo2Rom.exe
+devenv .\Projects\Nuo2RomPrj\Nuo2RomPrj.sln %command% "Release"
+copy /Y .\Projects\Nuo2RomPrj\Release\Nuo2RomPrj.exe .\Nuo2Rom.exe
 goto exit
 
 
